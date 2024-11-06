@@ -13,8 +13,6 @@ using namespace std;
 
 int main() {
     My_Queue<int> example;
-    vector<int> vector_example = {1, 3, 5, 4, 2, 7, 8, 4, 10, 11, 12};
-    list<int> example_list = {4, 3, 2, 8, 5, 6, 7, 10, 9, 1};
 
     cout << "QUESTION 1 \n" << endl;
 
@@ -56,6 +54,7 @@ int main() {
     cout << "\n\nQUESTION 2 \n" << endl;
 
     // demonstrating the functionality of recursive_linear_search_last searching for a target of 4
+    vector<int> vector_example = {1, 3, 5, 4, 2, 7, 8, 4, 10, 11, 12};
     int target = 4;
     int last_position = recursive_linear_search_last(vector_example, target, vector_example.size() - 1);
 
@@ -69,6 +68,7 @@ int main() {
     cout << "\n\nQUESTION 3 \n" << endl;
 
     // demonstrating the functionality of insertion_sort being called on a list
+    list<int> example_list = {4, 3, 2, 8, 5, 6, 7, 10, 9, 1};
     cout << "Original List Order: ";
 
     for (int ele : example_list) {
