@@ -52,7 +52,7 @@ int main() {
     cout << " \n \n QUESTION 2 \n" << endl;
 
     int target = 4;
-    int last_position = recursive_linear_search(vector_example, target, vector_example.size() - 1);
+    int last_position = recursive_linear_search_last(vector_example, target, vector_example.size() - 1);
 
     if (last_position != -1) {
         cout << "The last occurrence of the target: " << target << " is at index: " << last_position << endl;
