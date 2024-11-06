@@ -52,8 +52,8 @@ void My_Queue<Item_Type>::pop() {
     }
 }
 
-// function for returning the value at the front of the queue
-template<typename Item_Type>
+// Function for returning the value at the front of the queue
+template <typename Item_Type>
 const Item_Type& My_Queue<Item_Type>::front() const{
     try {
         if (!empty()) {
@@ -64,4 +64,41 @@ const Item_Type& My_Queue<Item_Type>::front() const{
     } catch (out_of_range err) {
         cerr << err.what() << endl;
     }
+}
+
+// Size function for returning number of items in the queue
+template <typename Item_Type>
+int My_Queue<Item_Type>::size() {
+    return num_items;
+}
+
+// Empty function that returns true if the queue is empty otherwise false
+template <typename Item_Type>
+bool My_Queue<Item_Type>::empty() {
+    return num_items == 0;
+}
+
+// Function for moving the front of the queue to the rear of the queue
+template <typename Item_Type>
+void My_Queue<Item_Type>::move_to_rear() {
+    if (size() <= 1) {
+        return;
+    } else {
+        Item_Type front_item = front();
+        pop();
+        push(front_item)
+    }
+}
+
+template <typename Item_Type>
+void My_Queue<Item_Type>::display() {
+    int length = size();
+
+    for (int i = 0; i < length; ++i) {
+        Item_Type front_item = front();
+        cout << front_item << " ";
+        move_to_rear();
+    }
+
+    cout << endl;
 }
