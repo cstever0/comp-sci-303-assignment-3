@@ -16,17 +16,25 @@ int main() {
     }
 
     // printing the front of the queue
-    cout << "Front: " << example.front() << endl;
+    try {
+        cout << "Front: " << example.front() << endl;
+    } catch (out_of_range err) {
+        cerr << err.what() << endl;
+    }
 
     // demonstrating the pop function
-    example.pop();
-    cout << "Front value after popping: " << example.front() << endl;
+    try {
+        example.pop();
+        cout << "Front value after popping: " << example.front() << endl;
+    } catch (out_of_range err) {
+        cerr << err.what() << endl;
+    }
 
     // demonstrating the size function
     cout << "Size of the Queue: " << example.size() << endl;
 
     // demonstrating the empty function
-    cout << "True if empty otherwise false: " << example.empty() << endl;
+    cout << "True(1) if empty otherwise false(0): " << example.empty() << endl;
 
     // demonstrating the display function
     cout << "Displaying the Queue: ";

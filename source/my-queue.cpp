@@ -3,6 +3,10 @@
 
 using namespace std;
 
+// this is the constructor for my Node
+template<typename Item_Type>
+My_Queue<Item_Type>::Node::Node(const Item_Type& item_data, Node* next_node) : data(item_data), next(next_node) {}
+
 // Constructor
 template <typename Item_Type>
 My_Queue<Item_Type>::My_Queue() : head(nullptr), tail(nullptr), num_items(0) {}
@@ -54,16 +58,11 @@ void My_Queue<Item_Type>::pop() {
 
 // Function for returning the value at the front of the queue
 template <typename Item_Type>
-const Item_Type& My_Queue<Item_Type>::front() const{
-    try {
-        if (!empty()) {
-            return head->data;
-        } else {
-            throw out_of_range("List is empty!");
-        }
-    } catch (out_of_range err) {
-        cerr << err.what() << endl;
+const Item_Type& My_Queue<Item_Type>::front() const {
+    if (empty()) {
+        throw out_of_range("Queue is empty!");
     }
+    return head->data;
 }
 
 // Size function for returning number of items in the queue
@@ -74,7 +73,7 @@ int My_Queue<Item_Type>::size() {
 
 // Empty function that returns true if the queue is empty otherwise false
 template <typename Item_Type>
-bool My_Queue<Item_Type>::empty() {
+bool My_Queue<Item_Type>::empty() const {
     return num_items == 0;
 }
 
@@ -86,7 +85,7 @@ void My_Queue<Item_Type>::move_to_rear() {
     } else {
         Item_Type front_item = front();
         pop();
-        push(front_item)
+        push(front_item);
     }
 }
 

@@ -26,7 +26,7 @@ public:
     void pop();
     const Item_Type& front() const;
     int size();
-    bool empty();
+    bool empty() const;
     void move_to_rear();
     void display();
 };
