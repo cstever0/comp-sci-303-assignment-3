@@ -1,12 +1,16 @@
 #include <iostream>
+#include <vector>
 #include "../headers/my-queue.h"
+#include "../headers/recursive-linear-search.h"
 #include "./my-queue.cpp"
+#include "./recursive-linear-search.cpp"
 
 
 using namespace std;
 
 int main() {
     My_Queue<int> example;
+    vector<int> vector_example = {1, 3, 5, 4, 2, 7, 8, 4, 10, 11, 12};
 
     cout << "QUESTION 1 \n" << endl;
 
@@ -44,6 +48,17 @@ int main() {
     example.move_to_rear();
     cout << "Queue after moving to rear: ";
     example.display();
+
+    cout << " \n \n QUESTION 2 \n" << endl;
+
+    int target = 4;
+    int last_position = recursive_linear_search(vector_example, target, vector_example.size() - 1);
+
+    if (last_position != -1) {
+        cout << "The last occurrence of the target: " << target << " is at index: " << last_position << endl;
+    } else {
+        cout << "The target: " << target << " was not found." << endl;
+    }
 
     return 0;
 }
