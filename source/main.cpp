@@ -55,6 +55,7 @@ int main() {
 
     cout << "\n\nQUESTION 2 \n" << endl;
 
+    // demonstrating the functionality of recursive_linear_search_last searching for a target of 4
     int target = 4;
     int last_position = recursive_linear_search_last(vector_example, target, vector_example.size() - 1);
 
@@ -67,12 +68,12 @@ int main() {
 
     cout << "\n\nQUESTION 3 \n" << endl;
 
+    // demonstrating the functionality of insertion_sort being called on a list
     cout << "Original List Order: ";
 
     for (int ele : example_list) {
         cout << ele << " ";
     }
-
     cout << endl;
 
     insertion_sort(example_list);
@@ -82,7 +83,6 @@ int main() {
     for (int ele : example_list) {
         cout << ele << " ";
     }
-
     cout << endl;
 
     return 0;

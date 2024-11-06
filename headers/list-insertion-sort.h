@@ -5,7 +5,7 @@
 
 using namespace std;
 
-template <typename Item_Type>
-void insertion_sort(list<Item_Type>& my_list);
+// Function declaration for insertion_sort on a list
+void insertion_sort(list<int>& my_list);
 
 #endif

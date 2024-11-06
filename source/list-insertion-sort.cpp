@@ -5,21 +5,20 @@
 using namespace std;
 
 // function definition for insertion_sort on a list
-template <typename Item_Type>
-void insertion_sort(list<Item_Type>& my_list) {
+void insertion_sort(list<int>& my_list) {
     // start from 2nd element and loop to the end
-    for (Item_Type it = next(my_list.begin()); it != my_list.end; ++it) {
-        Item_Type value = *it;
-        Item_Type insert_pos = it;
+    for (auto it = next(my_list.begin()); it != my_list.end(); ++it) {
+        int value = *it;
+        auto insert_pos = it;
 
         // find insert_pos where value should be inserted
-        Item_Type prev = prev(it);
-        while (insert_pos != my_list.begin() && value < *prev) {
-            *insert_pos = *prev;
-            insert_pos = prev;
+        auto previous = prev(it);
+        while (insert_pos != my_list.begin() && value < *previous) {
+            *insert_pos = *previous;
+            insert_pos = previous;
 
-            if (insert_pos != num.begin()) {
-                prev = prev(insert_pos);
+            if (insert_pos != my_list.begin()) {
+                previous = prev(insert_pos);
             }
         }
 
