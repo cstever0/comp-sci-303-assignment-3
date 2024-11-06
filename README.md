@@ -4,7 +4,7 @@ There are three programs included in this assignment. The first creates a Queue 
 
 The function declarations can be found in the my-queue.h, recursive-linear-search.h, and list-insertion-sort.h Header files.
 
-The function declarations can be found in the my-queue.cpp, recursive-linear-search.cpp, and list-insertion-sort.cpp files.
+The function definitions can be found in the my-queue.cpp, recursive-linear-search.cpp, and list-insertion-sort.cpp files.
 
 In order to run the code you can use a compiler of your choice to compile the code in the main.cpp file and run it with the example input given below.
 
