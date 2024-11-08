@@ -58,6 +58,14 @@ int main() {
     int target = 4;
     int last_position = recursive_linear_search_last(vector_example, target, vector_example.size() - 1);
 
+    cout << "The values to be searched: ";
+
+    for (int i = 0;i < vector_example.size(); ++i) {
+        cout << vector_example[i] << " ";
+    }
+
+    cout << endl;
+
     if (last_position != -1) {
         cout << "The last occurrence of the target: " << target << " is at index: " << last_position << endl;
     } else {
