@@ -60,7 +60,7 @@ int main() {
 
     cout << "The values to be searched: ";
 
-    for (int i = 0;i < vector_example.size(); ++i) {
+    for (int i = 0; i < vector_example.size(); ++i) {
         cout << vector_example[i] << " ";
     }
 
