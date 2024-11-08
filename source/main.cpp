@@ -63,7 +63,6 @@ int main() {
     for (int i = 0; i < vector_example.size(); ++i) {
         cout << vector_example[i] << " ";
     }
-
     cout << endl;
 
     if (last_position != -1) {
